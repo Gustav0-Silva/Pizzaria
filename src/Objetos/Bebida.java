@@ -1,6 +1,5 @@
 package Objetos;
 
-<<<<<<< HEAD
 import java.math.BigDecimal;
 
 public class Bebida {
@@ -20,7 +19,4 @@ public class Bebida {
     public BigDecimal getValor() {
         return valor;
     }
-=======
-public class Bebida {"Olá, Mundo"
->>>>>>> 4726ea3af152ea64afa3f2b1f788402432ae88dd
 }
