@@ -1,4 +1,4 @@
 package Objetos;
 
-public class Bebida {
+public class Bebida {"Olá, Mundo"
 }
