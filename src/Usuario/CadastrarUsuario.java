@@ -7,8 +7,10 @@ import java.util.Scanner;
 
 public class CadastrarUsuario extends ArmazenaDados {
 
-    private int custoEntrega;
-    public void cadastrarClienta(){
+
+    public static void cadastrarClienta(){
+
+        int custoEntrega = 0;
 
         Scanner scanner = new Scanner(System.in);
         System.out.println("Nome do usuário: ");

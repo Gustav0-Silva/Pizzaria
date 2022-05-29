@@ -1,3 +1,6 @@
+import Usuario.CadastrarUsuario;
+import Usuario.RemoverUsuario;
+
 import java.util.Scanner;
 
 public class Main {
@@ -12,7 +15,8 @@ public class Main {
             System.out.println();
             System.out.println("1 - Pedir uma pizza");
             System.out.println("2 - Cadastrar novo cliente");
-            System.out.println("3 - Sair do sistema");
+            System.out.println("3 - Remover usu[ario");
+            System.out.println("4 - Sair do sistema");
 
             String action = scanner.next();
 
@@ -21,9 +25,12 @@ public class Main {
                     //metodo de login
                     break;
                 case "2":
-                    //metodo de cadastrar novo cliente
+                    CadastrarUsuario.cadastrarClienta();
                     break;
                 case "3":
+                    RemoverUsuario.removerUsuario();
+                    break;
+                case "4":
                     System.out.println("Obrigado e volte sempre!");
                     ciclo = false;
                     break;
