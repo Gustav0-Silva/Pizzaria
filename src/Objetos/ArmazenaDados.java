@@ -9,7 +9,7 @@ public class ArmazenaDados {
         protected static List<Bebida> listaBebidas = new ArrayList<>();
         protected static List<Pizza> listaPizzas = new ArrayList<>();
         protected static List<Sobremesa> listaSobremesas = new ArrayList<>();
-        protected static List <Pedido> pedidosTemp = new ArrayList<>();
+        protected static List<String> pedidosTemp = new ArrayList<String>();
 
 
 

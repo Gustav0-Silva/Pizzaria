@@ -11,7 +11,15 @@ public class RemoverUsuario extends ArmazenaDados {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Digite o login do usuário a ser removido");
         String ususarioRemover = scanner.next();
+        System.out.println("Digite a senha do usuário: ");
+        String senha = scanner.next();
 
-        listaClientes.removeIf(cliente -> cliente.getLogin() == ususarioRemover);
+        if (listaClientes.contains(ususarioRemover) && listaClientes.contains(senha)){
+
+            listaClientes.removeIf(cliente -> cliente.getLogin() == ususarioRemover);
+        }else{
+            System.out.println("Usuário ou senha não encontrado");
+            return;
+        }
     }
 }
