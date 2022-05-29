@@ -8,21 +8,21 @@ public class Pedido {
     protected static BigDecimal valor;
     protected static int quantidade;
 
-    public Pedido(String nomeProduto, BigDecimal valor, int quantidade) {
+    public Pedido(String nomeProduto, BigDecimal valor) {
         this.nomeProduto = nomeProduto;
         this.valor = valor;
-        this.quantidade = quantidade;
+        //this.quantidade = quantidade;
     }
 
-    public static String getNomeProduto() {
+    public String getNomeProduto() {
         return nomeProduto;
     }
 
-    public static BigDecimal getValor() {
+    public BigDecimal getValor() {
         return valor;
     }
 
-    public static int getQuantidade() {
+    public int getQuantidade() {
         return quantidade;
     }
 }

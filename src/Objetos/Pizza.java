@@ -6,7 +6,7 @@ public class Pizza {
 
     private String nome;
     private String descricao;
-    private BigDecimal valor;
+    private static BigDecimal valor;
 
     public Pizza(String nome, String descricao, BigDecimal valor) {
         this.nome = nome;
