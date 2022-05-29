@@ -1,10 +1,18 @@
+import Objetos.ArmazenaDados;
+import Objetos.Cliente;
+import Produtos.CadastrarExemplos;
+import Produtos.CadastrarPizza;
+import Telas.Login;
 import Usuario.CadastrarUsuario;
 import Usuario.RemoverUsuario;
 
 import java.util.Scanner;
 
-public class Main {
+public class Main extends ArmazenaDados{
     public static void main(String[] args) {
+
+        CadastrarExemplos.cadastrarExemplos();
+
         boolean ciclo = true;
         Scanner scanner = new Scanner(System.in);
 
@@ -15,17 +23,17 @@ public class Main {
             System.out.println();
             System.out.println("1 - Pedir uma pizza");
             System.out.println("2 - Cadastrar novo cliente");
-            System.out.println("3 - Remover usu[ario");
+            System.out.println("3 - Remover usuário");
             System.out.println("4 - Sair do sistema");
 
-            String action = scanner.next();
+            String action = scanner.nextLine();
 
             switch (action){
                 case "1":
-                    //metodo de login
+                    Login.loginClinete();
                     break;
                 case "2":
-                    CadastrarUsuario.cadastrarClienta();
+                    CadastrarUsuario.cadastrarCliente();
                     break;
                 case "3":
                     RemoverUsuario.removerUsuario();

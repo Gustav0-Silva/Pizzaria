@@ -7,22 +7,32 @@ import java.util.Scanner;
 
 public class CadastrarUsuario extends ArmazenaDados {
 
+    public static void cadastrarCliente(){
 
-    public static void cadastrarClienta(){
+        String login;
 
         int custoEntrega = 0;
 
         Scanner scanner = new Scanner(System.in);
+
+        do {
+            System.out.println("Crie um login de usuário:");
+            login = scanner.nextLine();
+            if (Cliente.findCliente(login) != null){
+                System.out.println("Esse Login já existe, crie um login diferente");
+            }else{
+                break;
+            }
+        }while(true);
+
         System.out.println("Nome do usuário: ");
-        String nome = scanner.next();
-        System.out.println("Crie um login de usuário:");
-        String login = scanner.next();
+        String nome = scanner.nextLine();
         System.out.println("Crie uma senha:");
-        String senha = scanner.next();
+        String senha = scanner.nextLine();
         System.out.println("Qual o endereço para entrega?");
         String endereco = scanner.nextLine();
         System.out.println("Digite um telefone de contato: ");
-        String telefone = scanner.next();
+        String telefone = scanner.nextLine();
 
         boolean ciclo = true;
 
@@ -35,7 +45,7 @@ public class CadastrarUsuario extends ArmazenaDados {
             System.out.println("4 - Cristo Rei");
             System.out.println("5 - Batel");
 
-            String action = scanner.next();
+            String action = scanner.nextLine();
 
             switch (action){
                 case "1":
@@ -65,6 +75,7 @@ public class CadastrarUsuario extends ArmazenaDados {
         }while(ciclo);
 
         Cliente cliente = new Cliente(nome, login, senha, endereco, custoEntrega, telefone);
+
         listaClientes.add(cliente);
     }
 }

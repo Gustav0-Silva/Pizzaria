@@ -4,31 +4,31 @@ import java.math.BigDecimal;
 
 public class Bebida {
 
-    private String bebida;
-    private BigDecimal valorBebida;
+    private String nome;
+    private BigDecimal valor;
 
     private String descricao;
 
-    public Bebida(String bebida, BigDecimal valorBebida, String descricao) {
-        this.bebida = bebida;
-        this.valorBebida = valorBebida;
+    public Bebida(String nome, BigDecimal valor, String descricao) {
+        this.nome = nome;
+        this.valor = valor;
         this.descricao = descricao;
     }
 
-    public String getBebida() {
-        return bebida;
+    public String getNome() {
+        return nome;
     }
 
-    public void setBebida(String bebida) {
-        this.bebida = bebida;
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
-    public BigDecimal getValorBebida() {
-        return valorBebida;
+    public BigDecimal getValor() {
+        return valor;
     }
 
-    public void setValorBebida(BigDecimal valorBebida) {
-        this.valorBebida = valorBebida;
+    public void setValor(BigDecimal valor) {
+        this.valor = valor;
     }
 
     public String getDescrcao() {

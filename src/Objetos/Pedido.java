@@ -14,15 +14,15 @@ public class Pedido {
         //this.quantidade = quantidade;
     }
 
-    public static String getNomeProduto() {
+    public String getNomeProduto() {
         return nomeProduto;
     }
 
-    public static BigDecimal getValor() {
+    public BigDecimal getValor() {
         return valor;
     }
 
-    public static int getQuantidade() {
+    public int getQuantidade() {
         return quantidade;
     }
 }

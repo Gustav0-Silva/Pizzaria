@@ -8,6 +8,7 @@ import java.util.Scanner;
 
 public class CadastrarBebida extends ArmazenaDados {
         public void cadastrarBebida(){
+
             Scanner scanner = new Scanner(System.in);
             System.out.println("Digite a bebida a ser adicionada ");
             String sabor = scanner.next();
@@ -20,4 +21,12 @@ public class CadastrarBebida extends ArmazenaDados {
             listaBebidas.add(bebida);
 
 }
+    public static void imprimir(){
+        for(Bebida bebida : listaBebidas) {
+            System.out.println("Sabor:"+ bebida.getNome()+
+                    " Descrição: "+ bebida.getDescrcao() +
+                    " Valor: "+ bebida.getValor());
+
+        }
+    }
 }

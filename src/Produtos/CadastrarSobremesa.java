@@ -1,6 +1,7 @@
 package Produtos;
 
 import Objetos.ArmazenaDados;
+import Objetos.Pizza;
 import Objetos.Sobremesa;
 
 import java.math.BigDecimal;
@@ -19,5 +20,13 @@ public class CadastrarSobremesa extends ArmazenaDados {
         Sobremesa sobremesa = new Sobremesa(sabor, descricao, valor);
         listaSobremesas.add(sobremesa);
 
+    }
+    public static void imprimir(){
+        for(Sobremesa sobremesa : listaSobremesas) {
+            System.out.println("Sabor:"+ sobremesa.getNome()+
+                    " Descrição: "+ sobremesa.getDescricao() +
+                    " Valor: "+ sobremesa.getValor());
+
+        }
     }
 }
