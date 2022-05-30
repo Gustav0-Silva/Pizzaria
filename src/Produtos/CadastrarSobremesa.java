@@ -23,10 +23,11 @@ public class CadastrarSobremesa extends ArmazenaDados {
     }
     public static void imprimir(){
         for(Sobremesa sobremesa : listaSobremesas) {
-            System.out.println("Sabor:"+ sobremesa.getNome()+
-                    " Descrição: "+ sobremesa.getDescricao() +
-                    " Valor: "+ sobremesa.getValor());
-
+            System.out.println();
+            System.out.println("Sabor: " + sobremesa.getNome());
+            System.out.println("Descrição: " + sobremesa.getDescricao());
+            System.out.println("Valor: " + sobremesa.getValor());
+            System.out.println("---------------------------------------");
         }
     }
 }

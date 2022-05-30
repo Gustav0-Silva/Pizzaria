@@ -4,9 +4,9 @@ import java.math.BigDecimal;
 
 public class Pedido {
 
-    protected static String nomeProduto;
-    protected static BigDecimal valor;
-    protected static int quantidade;
+    protected String nomeProduto;
+    protected BigDecimal valor;
+    protected int quantidade;
 
     public Pedido(String nomeProduto, BigDecimal valor) {
         this.nomeProduto = nomeProduto;

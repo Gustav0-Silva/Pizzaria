@@ -19,11 +19,15 @@ public class PedirPizza extends ArmazenaDados {
         //for (int i = 0; i < quantidadeSabores; i++) {
 
             CadastrarPizza.imprimir();
-            System.out.println("Digite o sabor de pizza que deseja");
+            System.out.println("Digite o sabor de pizza que deseja ou s para sair");
             String sabor = scanner.nextLine();
 
+        if (sabor.equalsIgnoreCase("s")){
+            return;
+        }
+
             for (Pizza pizza : listaPizzas) {
-                if (pizza.getNome().equals(sabor)) {
+                if (pizza.getNome().equalsIgnoreCase(sabor)) {
                     Pedido pedido = new Pedido(pizza.getNome(), pizza.getValor());
                     pedidosTemp.add(pedido);
                 }

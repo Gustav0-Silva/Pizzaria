@@ -23,9 +23,11 @@ public class CadastrarBebida extends ArmazenaDados {
 }
     public static void imprimir(){
         for(Bebida bebida : listaBebidas) {
-            System.out.println("Sabor:"+ bebida.getNome()+
-                    " Descrição: "+ bebida.getDescrcao() +
-                    " Valor: "+ bebida.getValor());
+            System.out.println();
+            System.out.println("Sabor: " + bebida.getNome());
+            System.out.println("Descrição: " + bebida.getDescrcao());
+            System.out.println("Valor: " + bebida.getValor());
+            System.out.println("---------------------------------------");
 
         }
     }

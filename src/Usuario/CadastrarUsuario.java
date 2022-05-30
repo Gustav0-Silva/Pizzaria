@@ -43,6 +43,7 @@ import Objetos.ArmazenaDados;
 //=======
 import Objetos.Cliente;
 
+import java.math.BigDecimal;
 import java.util.Scanner;
 
 public class CadastrarUsuario extends ArmazenaDados {
@@ -89,23 +90,23 @@ public class CadastrarUsuario extends ArmazenaDados {
 
             switch (action){
                 case "1":
-                    custoEntrega = 5;
+                    custoEntrega = 1;
                     ciclo = false;
                     break;
                 case "2":
-                    custoEntrega = 7;
+                    custoEntrega = 2;
                     ciclo = false;
                     break;
                 case "3":
-                    custoEntrega = 10;
+                    custoEntrega = 3;
                     ciclo = false;
                     break;
                 case "4":
-                    custoEntrega = 12;
+                    custoEntrega = 4;
                     ciclo = false;
                     break;
                 case "5":
-                    custoEntrega = 15;
+                    custoEntrega = 5;
                     ciclo = false;
                     break;
                 default:

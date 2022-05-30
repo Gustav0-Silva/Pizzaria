@@ -21,7 +21,7 @@ public class Login extends ArmazenaDados {
             System.out.println("Login não encontrado, criar uma nova conta?(sim/não)");
             String criarNovaConta = scanner.nextLine();
             if (criarNovaConta.equalsIgnoreCase("sim")){
-                CadastrarUsuario cadastrarUsuario;
+                CadastrarUsuario.cadastrarCliente();
             }else{
                 return;
             }
@@ -33,7 +33,7 @@ public class Login extends ArmazenaDados {
                 String novaSenha = scanner.nextLine();
 
                 if ((novaSenha.equals(Cliente.findCliente(novoLogin).getSenha()))) {
-                    FazerPedido.fazerPedido();
+                    FazerPedido.fazerPedido(novoLogin,novaSenha);
                     break;
                 } else {
                     System.out.println("Senha errada, digite novamente a senha");

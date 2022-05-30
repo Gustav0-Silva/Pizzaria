@@ -24,10 +24,11 @@ public class CadastrarPizza extends ArmazenaDados {
     }
     public static void imprimir(){
             for(Pizza pizza : listaPizzas) {
-                System.out.println("Sabor:"+ pizza.getNome()+
-                            " Descrição: "+ pizza.getDescricao() +
-                            " Valor: "+ pizza.getValor());
-
+                System.out.println();
+                System.out.println("Sabor: " + pizza.getNome());
+                System.out.println("Descrição: " + pizza.getDescricao());
+                System.out.println("Valor: " + pizza.getValor());
+                System.out.println("---------------------------------------");
         }
     }
 }

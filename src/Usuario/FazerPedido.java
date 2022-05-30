@@ -1,16 +1,16 @@
 package Usuario;
 
 import Objetos.ArmazenaDados;
-import Objetos.Pedido;
 import Produtos.PedirBebida;
 import Produtos.PedirPizza;
 import Produtos.PedirSobremesa;
+import Produtos.RemoverItem;
 //import Produtos.PedirPizza;
 
 import java.util.Scanner;
 
 public class FazerPedido extends ArmazenaDados {
-    public static void fazerPedido(){
+    public static void fazerPedido(String login, String senha){
         Scanner scanner = new Scanner(System.in);
 
 
@@ -21,7 +21,9 @@ public class FazerPedido extends ArmazenaDados {
             System.out.println("1 - Pizza");
             System.out.println("2 - Bebida");
             System.out.println("3 - Sobremesa");
-            System.out.println("4 - Sair do modo pedidos");
+            System.out.println("4 - Remover um item");
+            System.out.println("5 - Pagar");
+            System.out.println("6 - Cancelar e Sair");
 
             String action = scanner.nextLine();
 
@@ -36,16 +38,19 @@ public class FazerPedido extends ArmazenaDados {
                     PedirSobremesa.pedirSobremesa();
                     break;
                 case "4":
-                    ImprimirPedidos.imprimirPedidos();
-                    ciclo = false;
-                    //Pagar.pagar();
-
-                    //zerar pedisotemp
-                    //imprimir pedido
+                    RemoverItem.removerItem(scanner);
                     break;
+                case "5":
+                    Pagamento.pagar(scanner,login);
+                    return;
+                case "6":
+                    pedidosTemp.clear();
+                    return;
                 default:
                     System.out.println("Opção inválida, por favor, informe outra");
             }
+
+            ImprimirPedidos.exibirTemp();
 
         }while(ciclo);
 

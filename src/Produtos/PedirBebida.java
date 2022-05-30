@@ -13,11 +13,15 @@ public class PedirBebida extends ArmazenaDados {
         Scanner scanner = new Scanner(System.in);
 
             CadastrarBebida.imprimir();
-            System.out.println("Digite a bebida que deseja");
+            System.out.println("Digite a bebida que deseja ou digite s para sair");
             String sabor = scanner.nextLine();
 
+            if (sabor.equalsIgnoreCase("s")){
+                return;
+            }
+
         for (Bebida bebida : listaBebidas) {
-            if (bebida.getNome().equals(sabor)) {
+            if (bebida.getNome().equalsIgnoreCase(sabor)) {
                 Pedido pedido = new Pedido(bebida.getNome(), bebida.getValor());
                 pedidosTemp.add(pedido);
             }

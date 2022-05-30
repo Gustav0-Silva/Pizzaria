@@ -13,11 +13,15 @@ public class PedirSobremesa extends ArmazenaDados {
         Scanner scanner = new Scanner(System.in);
 
         CadastrarSobremesa.imprimir();
-        System.out.println("Digite a sobremesa que deseja");
+        System.out.println("Digite a sobremesa que deseja ou s para sair");
         String sabor = scanner.nextLine();
 
+        if (sabor.equalsIgnoreCase("s")){
+            return;
+        }
+
         for (Sobremesa sobremesa : listaSobremesas) {
-            if (sobremesa.getNome().equals(sabor)) {
+            if (sobremesa.getNome().equalsIgnoreCase(sabor)) {
                 Pedido pedido = new Pedido(sobremesa.getNome(), sobremesa.getValor());
                 pedidosTemp.add(pedido);
             }

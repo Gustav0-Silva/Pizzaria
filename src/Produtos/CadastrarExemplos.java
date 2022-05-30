@@ -38,7 +38,13 @@ public class CadastrarExemplos extends ArmazenaDados {
 
     }
 
+    public static void cadastrarCliente(){
+        Cliente cliente = new Cliente("Gustavo","gSilva","123","Rua Joao Jose", 2,"987955585");
+        listaClientes.add(cliente);
+    }
+
     public static void cadastrarExemplos(){
+        cadastrarCliente();
         cadastrarPizza();
         cadastrarBebida();
         cadastrarSobremesa();
