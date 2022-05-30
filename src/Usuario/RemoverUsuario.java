@@ -14,12 +14,14 @@ public class RemoverUsuario extends ArmazenaDados {
         System.out.println("Digite a senha do usuário: ");
         String senha = scanner.next();
 
-        if (listaClientes.contains(ususarioRemover) && listaClientes.contains(senha)){
-
-            listaClientes.removeIf(cliente -> cliente.getLogin() == ususarioRemover);
-        }else{
-            System.out.println("Usuário ou senha não encontrado");
-            return;
+        for (Cliente cliente: listaClientes) {
+            if (cliente.getLogin().equals(ususarioRemover) && cliente.getSenha().equals(senha)){
+                listaClientes.remove(cliente);
+                System.out.println("Cliente removido com sucesso");
+                System.out.println();
+                return;
+            }
         }
+        System.out.println("Cliente não encontrado no banco de dados");
     }
 }

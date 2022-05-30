@@ -8,7 +8,7 @@ import java.math.BigDecimal;
 import java.util.Scanner;
 
 public class CadastrarSobremesa extends ArmazenaDados {
-    public void cadastrarSobremesa(){
+    public static void cadastrarSobremesa(){
         Scanner scanner = new Scanner(System.in);
         System.out.println("Digite a sobremesa a ser adicionada ");
         String sabor = scanner.next();

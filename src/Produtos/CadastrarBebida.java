@@ -7,7 +7,7 @@ import java.math.BigDecimal;
 import java.util.Scanner;
 
 public class CadastrarBebida extends ArmazenaDados {
-        public void cadastrarBebida(){
+        public static void cadastrarBebida(){
 
             Scanner scanner = new Scanner(System.in);
             System.out.println("Digite a bebida a ser adicionada ");

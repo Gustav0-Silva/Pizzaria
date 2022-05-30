@@ -8,7 +8,7 @@ import java.math.BigDecimal;
 import java.util.Scanner;
 
 public class CadastrarPizza extends ArmazenaDados {
-    public void cadastrarPizza(){
+    public static void cadastrarPizza(){
 
         Scanner scanner = new Scanner(System.in);
         System.out.println("Digite o sabor da pizza a ser adicionado ");

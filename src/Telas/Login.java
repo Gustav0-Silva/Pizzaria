@@ -16,6 +16,14 @@ public class Login extends ArmazenaDados {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Digite o login do cliente");
         String novoLogin = scanner.nextLine();
+        String novaSenha = null;
+
+        if (novoLogin.equals("Admin")){
+            novaSenha = scanner.nextLine();
+            if (novaSenha.equals("Admin")){
+                Administrador.executar(scanner);
+            }
+        }
 
         if(Cliente.findCliente(novoLogin) == null){
             System.out.println("Login não encontrado, criar uma nova conta?(sim/não)");
@@ -30,7 +38,7 @@ public class Login extends ArmazenaDados {
 
             do {
                 System.out.println("Digite a senha");
-                String novaSenha = scanner.nextLine();
+                novaSenha = scanner.nextLine();
 
                 if ((novaSenha.equals(Cliente.findCliente(novoLogin).getSenha()))) {
                     FazerPedido.fazerPedido(novoLogin,novaSenha);
