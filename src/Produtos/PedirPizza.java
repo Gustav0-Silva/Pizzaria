@@ -1,9 +1,6 @@
 package Produtos;
 
-import Objetos.ArmazenaDados;
-import Objetos.Cliente;
-import Objetos.Pedido;
-import Objetos.Pizza;
+import Objetos.*;
 import Usuario.FazerPedido;
 
 import java.math.BigDecimal;
@@ -28,23 +25,25 @@ public class PedirPizza extends ArmazenaDados {
                 break;
         }
 
-        String sabores = null;
-        BigDecimal valores = BigDecimal.valueOf(0);
 
-            CadastrarPizza.imprimir();
-            System.out.println("Digite o número da pizza que deseja ou s para sair");
-            String sabor = scanner.nextLine();
+        imprimirProdutos(TiposProdutos.PIZZA);
+        System.out.println("Digite o nome da pizza que deseja ou s para sair");
+        String sabor = scanner.nextLine();
 
         if (sabor.equalsIgnoreCase("s")){
             return;
         }
 
-        for (Pizza pizza : listaPizzas) {
-                if (pizza.getNome().equalsIgnoreCase(sabor)) {
-                    Pedido pedido = new Pedido(pizza.getNome(), pizza.getValor());
-                    pedidosTemp.add(pedido);
-                }
-            }
+        Produto produto = pedidoExiste(TiposProdutos.PIZZA);
+
+        if (produto.equals(null)){
+            System.out.println("Produto não existe");
+            return;
+        } else {
+            Pedido pedido = new Pedido(produto);
+            pedidosTemp.add(pedido);
+            return;
         }
     }
-//}
+}
+

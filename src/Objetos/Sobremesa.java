@@ -2,16 +2,13 @@ package Objetos;
 
 import java.math.BigDecimal;
 
-public class Sobremesa {
+public class Sobremesa extends Produto{
 
-    private String nome;
-    private String descricao;
-    private BigDecimal valor;
-
-    public Sobremesa(String nome, String descricao, BigDecimal valor) {
+    public Sobremesa(String nome, String descricao, BigDecimal valor, Enum tipo) {
         this.nome = nome;
         this.descricao = descricao;
         this.valor = valor;
+        this.tipo = tipo;
     }
 
     public String getNome() {
@@ -25,4 +22,6 @@ public class Sobremesa {
     public BigDecimal getValor() {
         return valor;
     }
+
+
 }

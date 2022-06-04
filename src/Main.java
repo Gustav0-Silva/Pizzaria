@@ -1,7 +1,5 @@
 import Objetos.ArmazenaDados;
-import Objetos.Cliente;
-import Produtos.CadastrarExemplos;
-import Produtos.CadastrarPizza;
+//import Produtos.CadastrarExemplos;
 import Telas.Login;
 import Usuario.CadastrarUsuario;
 import Usuario.RemoverUsuario;
@@ -11,7 +9,7 @@ import java.util.Scanner;
 public class Main extends ArmazenaDados{
     public static void main(String[] args) {
 
-        CadastrarExemplos.cadastrarExemplos();
+//        CadastrarExemplos.cadastrarExemplos();
 
         boolean ciclo = true;
         Scanner scanner = new Scanner(System.in);

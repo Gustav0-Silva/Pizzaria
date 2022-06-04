@@ -4,7 +4,7 @@ import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ArmazenaDados {
+public class ArmazenaDados<T> {
 
         protected static List<Cliente> listaClientes = new ArrayList<>();
         protected static List<Bebida> listaBebidas = new ArrayList<>();
@@ -14,14 +14,36 @@ public class ArmazenaDados {
         protected static List<ProdutosVendidos> listaVendidos = new ArrayList<>();
         protected static ArrayList<String> bairros = new ArrayList<>();
 
+        protected static List<Produto> listaProdutos = new ArrayList<>();
 
-        public static void criarBairros() {
+
+        protected static void criarBairros() {
                 bairros.add("vila formosa");
         }
 
         public static void imprimirBairros() {
                 for (int i = 0; i < bairros.size(); i++) {
                         System.out.println(bairros.get(i));
+                }
+        }
+
+        public static Produto pedidoExiste(Enum tipo){
+                for (Produto produto: listaProdutos) {
+                        if (produto.tipo.equals(tipo)){
+                                return produto;
+                        }
+                }
+                return null;
+        }
+
+        public static void imprimirProdutos(Enum tipo){
+                for (Produto produto: listaProdutos) {
+                        if (produto.tipo.equals(tipo)){
+                                System.out.println("Nome: " + produto.nome);
+                                System.out.println("Descição: " + produto.descricao);
+                                System.out.println("Valor: " + produto.valor);
+                                System.out.println("-----------------------------");
+                        }
                 }
         }
 

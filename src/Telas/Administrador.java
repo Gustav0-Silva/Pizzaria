@@ -18,8 +18,6 @@ public class Administrador {
         System.out.println("Bem vindo a interface de adminsitração");
         System.out.println("O que deseja fazer?");
         System.out.println("1 - Cadastrar uma nova pizza");
-        System.out.println("2 - Cadastrar uma nova bebida");
-        System.out.println("3 - Cadastrar uma nova sobremesa");
         System.out.println("4 - Remover pizza");
         System.out.println("5 - Remover uma bebida");
         System.out.println("6 - Remover uma sobremesa");
@@ -29,7 +27,7 @@ public class Administrador {
 
         switch (action){
             case "1":
-                CadastrarPizza.cadastrarPizza();
+                CadastrarProduto.executar(scanner);
                 break;
             case "2":
                 CadastrarBebida.cadastrarBebida();

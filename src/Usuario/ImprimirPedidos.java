@@ -27,7 +27,7 @@ public class ImprimirPedidos extends ArmazenaDados {
         System.out.println();
 
         for (Pedido pedido: pedidosTemp) {
-            System.out.println("Produto: " + pedido.getNomeProduto());
+            System.out.println("Produto: " + pedido.);
             System.out.println("Valor: " + pedido.getValor());
             System.out.println("--------------------------------");
 

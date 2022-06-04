@@ -1,9 +1,6 @@
 package Produtos;
 
-import Objetos.ArmazenaDados;
-import Objetos.Bebida;
-import Objetos.Pedido;
-import Objetos.Sobremesa;
+import Objetos.*;
 
 import java.util.Scanner;
 
@@ -12,7 +9,7 @@ public class PedirSobremesa extends ArmazenaDados {
 
         Scanner scanner = new Scanner(System.in);
 
-        CadastrarSobremesa.imprimir();
+        imprimirProdutos(TiposProdutos.SOBREMESA);
         System.out.println("Digite a sobremesa que deseja ou s para sair");
         String sabor = scanner.nextLine();
 

@@ -3,6 +3,7 @@ package Produtos;
 import Objetos.ArmazenaDados;
 import Objetos.Bebida;
 import Objetos.Pedido;
+import Objetos.TiposProdutos;
 
 import java.util.Scanner;
 
@@ -12,7 +13,7 @@ public class PedirBebida extends ArmazenaDados {
 
         Scanner scanner = new Scanner(System.in);
 
-            CadastrarBebida.imprimir();
+            imprimirProdutos(TiposProdutos.BEBIDA);
             System.out.println("Digite a bebida que deseja ou digite s para sair");
             String sabor = scanner.nextLine();
 
