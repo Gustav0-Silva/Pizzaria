@@ -13,22 +13,14 @@ public class CadastrarProduto extends ArmazenaDados {
         System.out.println("3 - Sobremesa");
         String action = sc.nextLine();
 
-        switch (action){
-            case "1":
-                cadastro(sc,TiposProdutos.PIZZA);
-                break;
-            case "2":
-                cadastro(sc,TiposProdutos.BEBIDA);
-                break;
-            case "3":
-                cadastro(sc,TiposProdutos.SOBREMESA);
-            default:
-                System.out.println("Opção inválida");
+        switch (action) {
+            case "1", "2", "3" -> cadastro(sc, action);
+            default -> System.out.println("Opção inválida");
         }
 
     }
 
-    public static void cadastro(Scanner sc, Enum tipo){
+    public static void cadastro(Scanner sc, String action){
 
         System.out.println("Digite o nome do produto que deseja adicionar: ");
         String nome = sc.nextLine();
@@ -37,7 +29,28 @@ public class CadastrarProduto extends ArmazenaDados {
         System.out.println("Digite o valor do produto: ");
         BigDecimal valor = sc.nextBigDecimal();
 
-        Produto produto = new Produto(nome, descricao, valor, tipo);
+        switch (action){
+            case "1":
+                Pizza pizza = new Pizza(nome,descricao,valor);
+                listaProdutos.add(pizza);
+                System.out.println("Produto adicionado com sucesso!");
+                System.out.println();
+                break;
+            case "2":
+                Bebida bebida = new Bebida(nome,descricao,valor);
+                listaProdutos.add(bebida);
+                System.out.println("Produto adicionado com sucesso!");
+                System.out.println();
+                break;
+            case "3":
+                Sobremesa sobremesa = new Sobremesa(nome,descricao,valor);
+                listaProdutos.add(sobremesa);
+                System.out.println("Produto adicionado com sucesso!");
+                System.out.println();
+                break;
+            default:
+                System.out.println("Produto não adicionado");
+        }
 
     }
 }

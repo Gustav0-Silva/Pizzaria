@@ -4,11 +4,10 @@ import java.math.BigDecimal;
 
 public class Bebida extends Produto{
 
-    public Bebida(String nome, String descricao, BigDecimal valor, Enum tipo) {
+    public Bebida(String nome, String descricao, BigDecimal valor) {
         this.nome = nome;
         this.valor = valor;
         this.descricao = descricao;
-        this.tipo = tipo;
     }
 
     public String getNome() {
@@ -27,7 +26,7 @@ public class Bebida extends Produto{
         this.valor = valor;
     }
 
-    public String getDescrcao() {
+    public String getDescricao() {
         return descricao;
     }
 
@@ -35,16 +34,7 @@ public class Bebida extends Produto{
         this.descricao = descrcao;
     }
 
-    public void imprimir() {
-        for (Produto produto: listaProdutos) {
-            if (produto instanceof Bebida){
-                System.out.println("Nome: " + ((Bebida) produto).getNome());
-                System.out.println("Descrição: " + ((Bebida) produto).getDescrcao());
-                System.out.println("Valor: " + ((Bebida) produto).getValor());
-                System.out.println("--------------------------------------");
-            }
-        }
-    }
+
 }
 
 

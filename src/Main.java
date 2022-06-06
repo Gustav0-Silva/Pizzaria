@@ -1,5 +1,6 @@
 import Objetos.ArmazenaDados;
 //import Produtos.CadastrarExemplos;
+import Produtos.CadastrarExemplos;
 import Telas.Login;
 import Usuario.CadastrarUsuario;
 import Usuario.RemoverUsuario;
@@ -9,7 +10,7 @@ import java.util.Scanner;
 public class Main extends ArmazenaDados{
     public static void main(String[] args) {
 
-//        CadastrarExemplos.cadastrarExemplos();
+       CadastrarExemplos.cadastrarExemplos();
 
         boolean ciclo = true;
         Scanner scanner = new Scanner(System.in);
@@ -19,7 +20,7 @@ public class Main extends ArmazenaDados{
             System.out.println("Bem vindo a Masters Pizzaria");
             System.out.println("O que deseja fazer hoje?");
             System.out.println();
-            System.out.println("1 - Pedir uma pizza");
+            System.out.println("1 - Fazer um pedido");
             System.out.println("2 - Cadastrar novo cliente");
             System.out.println("3 - Remover usuário");
             System.out.println("4 - Sair do sistema");

@@ -7,13 +7,23 @@ public class Produto extends ArmazenaDados {
     protected String nome;
     protected String descricao;
     protected BigDecimal valor;
-    protected Enum tipo;
 
-    public Produto(String nome, String descricao, BigDecimal valor, Enum tipo) {
+    public Produto(String nome, String descricao, BigDecimal valor) {
         this.nome = nome;
         this.descricao = descricao;
         this.valor = valor;
-        this.tipo = tipo;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public String getDescricao() {
+        return descricao;
+    }
+
+    public BigDecimal getValor() {
+        return valor;
     }
 
     public Produto() {

@@ -6,7 +6,7 @@ import java.util.List;
 public class ProdutosVendidos {
 
     private Cliente cliente;
-    private List<Pedido> listaPedidosFinal;
+    private static List<Produto> listaPedidosFinal;
     private String metodoPagamento;
     private BigDecimal valorCompra;
 
@@ -21,7 +21,7 @@ public class ProdutosVendidos {
         return cliente;
     }
 
-    public List<Pedido> getListaPedidosFinal() {
+    public List<Produto> getListaPedidosFinal() {
         return listaPedidosFinal;
     }
 

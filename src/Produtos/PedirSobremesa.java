@@ -9,20 +9,43 @@ public class PedirSobremesa extends ArmazenaDados {
 
         Scanner scanner = new Scanner(System.in);
 
-        imprimirProdutos(TiposProdutos.SOBREMESA);
-        System.out.println("Digite a sobremesa que deseja ou s para sair");
+        imprimirProdutos("sobremesa");
+        System.out.println("Digite a sobremesa que deseja ou S para sair");
         String sabor = scanner.nextLine();
 
         if (sabor.equalsIgnoreCase("s")){
             return;
         }
 
-        for (Sobremesa sobremesa : listaSobremesas) {
-            if (sobremesa.getNome().equalsIgnoreCase(sabor)) {
-                Pedido pedido = new Pedido(sobremesa.getNome(), sobremesa.getValor());
-                pedidosTemp.add(pedido);
+        if (sabor.matches("[0-9]+")){
+            for (Produto produto : listaProdutos) {
+                if (produto instanceof Sobremesa) {
+                    if (Integer.parseInt(sabor) == listaProdutos.indexOf(produto)) {
+                        Sobremesa sobremesa = new Sobremesa(produto.getNome(), produto.getDescricao(), produto.getValor());
+                        pedidosTemp.add(sobremesa);
+                        System.out.println("Pedido adicionado com sucesso");
+                        System.out.println();
+                        return;
+                    }
+                }
             }
-        }
+            System.out.println("Número informado não consta no menu, tente novamente");
+            pedirSobremesa();
 
+        }else {
+            for (Produto produto : listaProdutos) {
+                if (produto instanceof Sobremesa) {
+                    if (produto.getNome().equalsIgnoreCase(sabor)) {
+                        Sobremesa sobremesa = new Sobremesa(produto.getNome(), produto.getDescricao(), produto.getValor());
+                        pedidosTemp.add(sobremesa);
+                        System.out.println("Pedido adicionado com sucesso");
+                        System.out.println();
+                        return;
+                    }
+                }
+            }
+            System.out.println("Sabor informado não consta no menu, tente novamente");
+            pedirSobremesa();
+        }
     }
 }

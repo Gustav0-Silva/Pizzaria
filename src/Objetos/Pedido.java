@@ -2,11 +2,9 @@ package Objetos;
 
 import java.math.BigDecimal;
 
-public class Pedido {
+public class Pedido extends Produto{
 
-    protected Produto produto;
-
-    public Pedido(Produto produto) {
-        this.produto = produto;
+    public Pedido(String nome, String descricao, BigDecimal valor) {
+        super(nome, descricao, valor);
     }
 }

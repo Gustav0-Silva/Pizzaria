@@ -4,56 +4,126 @@ import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ArmazenaDados<T> {
+public class ArmazenaDados{
 
         protected static List<Cliente> listaClientes = new ArrayList<>();
-        protected static List<Bebida> listaBebidas = new ArrayList<>();
-        protected static List<Pizza> listaPizzas = new ArrayList<>();
-        protected static List<Sobremesa> listaSobremesas = new ArrayList<>();
-        protected static List<Pedido> pedidosTemp = new ArrayList<>();
+        protected static List<Produto> pedidosTemp = new ArrayList<>();
         protected static List<ProdutosVendidos> listaVendidos = new ArrayList<>();
-        protected static ArrayList<String> bairros = new ArrayList<>();
-
         protected static List<Produto> listaProdutos = new ArrayList<>();
 
-
-        protected static void criarBairros() {
-                bairros.add("vila formosa");
-        }
-
-        public static void imprimirBairros() {
-                for (int i = 0; i < bairros.size(); i++) {
-                        System.out.println(bairros.get(i));
+        public static boolean ProdutoExisteNumero(int numeroProduto, String tipo){
+                switch (tipo){
+                        case "pizza":
+                                for (Produto produto: listaProdutos) {
+                                        if (produto instanceof Pizza && numeroProduto == listaProdutos.indexOf(produto)){
+                                                return true;
+                                        }
+                                }
+                                return false;
+                        case "bebida":
+                                for (Produto produto: listaProdutos) {
+                                        if (produto instanceof Bebida && numeroProduto == listaProdutos.indexOf(produto)){
+                                                return true;
+                                        }
+                                }
+                                return false;
+                        case "sobremesa":
+                                for (Produto produto: listaProdutos) {
+                                        if (produto instanceof Sobremesa && numeroProduto == listaProdutos.indexOf(produto)){
+                                                return true;
+                                        }
+                                }
+                                return false;
                 }
+                return false;
         }
 
-        public static Produto pedidoExiste(Enum tipo){
+        public static boolean produtoExisteNome(String nomeProduto, String tipo){
+                switch (tipo){
+                        case "pizza":
+                                for (Produto produto: listaProdutos) {
+                                        if (produto instanceof Pizza && produto.getNome().equalsIgnoreCase(nomeProduto)){
+                                                return true;
+                                        }
+                                }
+                                return false;
+                        case "bebida":
+                                for (Produto produto: listaProdutos) {
+                                        if (produto instanceof Bebida && produto.getNome().equalsIgnoreCase(nomeProduto)){
+                                                return true;
+                                        }
+                                }
+                                return false;
+                        case "sobremesa":
+                                for (Produto produto: listaProdutos) {
+                                        if (produto instanceof Sobremesa && produto.getNome().equalsIgnoreCase(nomeProduto)){
+                                                return true;
+                                        }
+                                }
+                                return false;
+                }
+                return false;
+        }
+        public static void excluirProduto(String nome){
                 for (Produto produto: listaProdutos) {
-                        if (produto.tipo.equals(tipo)){
-                                return produto;
+                        if (produto.getNome().equalsIgnoreCase(nome)){
+                                listaProdutos.remove(produto);
+                                System.out.println("Produto removido com sucesso");
+                                System.out.println();
+                                return;
                         }
                 }
-                return null;
         }
-
-        public static void imprimirProdutos(Enum tipo){
-                for (Produto produto: listaProdutos) {
-                        if (produto.tipo.equals(tipo)){
-                                System.out.println("Nome: " + produto.nome);
-                                System.out.println("Descição: " + produto.descricao);
-                                System.out.println("Valor: " + produto.valor);
-                                System.out.println("-----------------------------");
-                        }
-                }
-        }
-
 
         public static BigDecimal valorDaVenda() {
                 BigDecimal valorTotal = BigDecimal.valueOf(0);
-                for (Pedido pedido : pedidosTemp) {
-                        valorTotal = valorTotal.add(pedido.getValor());
+                for (Produto produto : pedidosTemp) {
+                        valorTotal = valorTotal.add(produto.getValor());
                 }
                 return valorTotal;
+        }
+
+        public static void imprimirProdutos(String item){
+                System.out.println();
+
+                switch (item){
+                        case "pizza":
+                                for (Produto produto: listaProdutos) {
+                                        if (produto instanceof Pizza){
+                                                System.out.println("Número: " + listaProdutos.indexOf(produto) );
+                                                System.out.println("Nome: " + produto.getNome());
+                                                System.out.println("Descrição: " + produto.getDescricao());
+                                                System.out.println("Valor: R$ " + produto.getValor());
+                                                System.out.println("--------------------------------------------");
+                                        }
+                                }
+                                break;
+                        case "bebida":
+                                for (Produto produto: listaProdutos) {
+                                        if (produto instanceof Bebida){
+                                                System.out.println("Número: " + listaProdutos.indexOf(produto) );
+                                                System.out.println("Nome: " + produto.getNome());
+                                                System.out.println("Descrição: " + produto.getDescricao());
+                                                System.out.println("Valor: R$ " + produto.getValor());
+                                                System.out.println("--------------------------------------------");
+                                        }
+                                }
+                                break;
+                        case "sobremesa":
+                                for (Produto produto: listaProdutos) {
+                                        if (produto instanceof Sobremesa){
+                                                System.out.println("Número: " + listaProdutos.indexOf(produto) );
+                                                System.out.println("Nome: " + produto.getNome());
+                                                System.out.println("Descrição: " + produto.getDescricao());
+                                                System.out.println("Valor: R$ " + produto.getValor());
+                                                System.out.println("--------------------------------------------");
+                                        }
+                                }
+                                break;
+                }
+
+
+
         }
 
         public static Cliente retornaCliente(String login) {

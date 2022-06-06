@@ -22,6 +22,7 @@ public class Login extends ArmazenaDados {
             novaSenha = scanner.nextLine();
             if (novaSenha.equals("Admin")){
                 Administrador.executar(scanner);
+                return;
             }
         }
 

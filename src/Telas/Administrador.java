@@ -12,16 +12,13 @@ public class Administrador {
 
         do {
 
-
-
         System.out.println();
         System.out.println("Bem vindo a interface de adminsitração");
         System.out.println("O que deseja fazer?");
-        System.out.println("1 - Cadastrar uma nova pizza");
-        System.out.println("4 - Remover pizza");
-        System.out.println("5 - Remover uma bebida");
-        System.out.println("6 - Remover uma sobremesa");
-        System.out.println("7 - Sair do sistema");
+        System.out.println("1 - Cadastrar um produto");
+        System.out.println("2 - Remover um produto");
+        System.out.println("3 - Exibir relatórios");
+        System.out.println("3 - Sair do sistema");
 
         String action = scanner.nextLine();
 
@@ -30,21 +27,12 @@ public class Administrador {
                 CadastrarProduto.executar(scanner);
                 break;
             case "2":
-                CadastrarBebida.cadastrarBebida();
+                RemoverProduto.executar(scanner);
                 break;
             case "3":
-                CadastrarSobremesa.cadastrarSobremesa();
+                ExibirRelatorios.executar(scanner);
                 break;
             case "4":
-                RemoverPizza.executar(scanner);
-                break;
-            case "5":
-                RemoverBebida.executar(scanner);
-                break;
-            case "6":
-                RemoverSobremesa.executar(scanner);
-                break;
-            case "7":
                 System.out.println("Saindo do sistema...");
                 ciclo = false;
                 break;

@@ -13,36 +13,61 @@ public class PedirPizza extends ArmazenaDados {
         System.out.println("Gostaria de pedir pizza de dois sabores?");
         System.out.println("1 - 1 Sabor");
         System.out.println("2 - 2 Sabores");
+        System.out.println("3 - Sair");
         String action = scanner.nextLine();
 
-        switch (action){
+        switch (action) {
             case "2":
                 PedirPizzaDoisSabores.executar(scanner);
                 return;
-            case"1":
+            case "1":
                 break;
+            case "3":
+                return;
             default:
+                System.out.println("Item inválido, tente novamente");
+                pedirPizza();
                 break;
         }
 
 
-        imprimirProdutos(TiposProdutos.PIZZA);
-        System.out.println("Digite o nome da pizza que deseja ou s para sair");
+        imprimirProdutos("pizza");
+        System.out.println();
+        System.out.println("Digite o nome da pizza que deseja ou S para sair");
         String sabor = scanner.nextLine();
 
-        if (sabor.equalsIgnoreCase("s")){
+        if (sabor.equalsIgnoreCase("s")) {
             return;
         }
 
-        Produto produto = pedidoExiste(TiposProdutos.PIZZA);
-
-        if (produto.equals(null)){
-            System.out.println("Produto não existe");
-            return;
+        if (sabor.matches("[0-9]+")) {
+            for (Produto produto : listaProdutos) {
+                if (produto instanceof Pizza) {
+                    if (Integer.parseInt(sabor) == listaProdutos.indexOf(produto)) {
+                        Pizza pizza = new Pizza(produto.getNome(), produto.getDescricao(), produto.getValor());
+                        pedidosTemp.add(pizza);
+                        System.out.println("Pedido adicionado com sucesso");
+                        System.out.println();
+                        return;
+                    }
+                }
+            }
+            System.out.println("Número informado não consta no menu, tente novamente");
+            pedirPizza();
         } else {
-            Pedido pedido = new Pedido(produto);
-            pedidosTemp.add(pedido);
-            return;
+            for (Produto produto : listaProdutos) {
+                if (produto instanceof Pizza) {
+                    if (produto.getNome().equalsIgnoreCase(sabor)) {
+                        Pizza pizza = new Pizza(produto.getNome(), produto.getDescricao(), produto.getValor());
+                        pedidosTemp.add(pizza);
+                        System.out.println("Pedido adicionado com sucesso");
+                        System.out.println();
+                        return;
+                    }
+                }
+            }
+            System.out.println("Sabor informado não consta no menu, tente novamente");
+            pedirPizza();
         }
     }
 }

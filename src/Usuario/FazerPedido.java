@@ -32,7 +32,7 @@ public class FazerPedido extends ArmazenaDados {
                     PedirPizza.pedirPizza();
                     break;
                 case "2":
-                    PedirBebida.pedirbebida();
+                    PedirBebida.pedirBebida();
                     break;
                 case "3":
                     PedirSobremesa.pedirSobremesa();

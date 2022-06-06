@@ -61,6 +61,7 @@ public class Pagamento extends ArmazenaDados {
             pagamento = scanner.nextLine();
 
             if (pagamento.equals("4")){
+                pagamento = "Dinheiro";
                 System.out.println("Caso precise de troco, informe o valor das sua cédula");
                 System.out.println("Caso não haja necessidade, informe o valor do pedido");
                 BigDecimal valorTroco = scanner.nextBigDecimal();
@@ -71,12 +72,20 @@ public class Pagamento extends ArmazenaDados {
                 System.out.println("Será enviado um troco de R$ " + valorTroco);
                 System.out.println();
                 ciclo = false;
-            }else if (pagamento.equals("1") || pagamento.equals("2")){
+            }else if (pagamento.equals("1")){
+                pagamento = "Débito";
+                System.out.println();
+                System.out.println("A maquininha será enviada até você");
+                System.out.println();
+                ciclo = false;
+            } else if (pagamento.equals("2")) {
+                pagamento = "Crédito";
                 System.out.println();
                 System.out.println("A maquininha será enviada até você");
                 System.out.println();
                 ciclo = false;
             } else if (pagamento.equals("3")) {
+                pagamento = "Pix";
                 System.out.println();
                 System.out.println("Nossa chave pix: 000.000.0091-10");
                 System.out.println("Nome: Thomas Antonelli Olmos Delgado");

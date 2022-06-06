@@ -2,6 +2,7 @@ package Produtos;
 
 import Objetos.ArmazenaDados;
 import Objetos.Pedido;
+import Objetos.Produto;
 import Usuario.ImprimirPedidos;
 
 import java.util.Scanner;
@@ -22,9 +23,9 @@ public class RemoverItem extends ArmazenaDados {
         System.out.println("Por favor, digite o nome do item que deseja remover: ");
         String remover = scanner.nextLine();
 
-        for (Pedido pedido: pedidosTemp) {
-            if (remover.equalsIgnoreCase(pedido.getNomeProduto())){
-                pedidosTemp.remove(pedido);
+        for (Produto produto: pedidosTemp) {
+            if (remover.equalsIgnoreCase(produto.getNome())){
+                pedidosTemp.remove(produto);
                 System.out.println("Item removido com sucesso");
                 System.out.println();
                 return;

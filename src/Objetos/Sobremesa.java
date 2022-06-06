@@ -4,11 +4,10 @@ import java.math.BigDecimal;
 
 public class Sobremesa extends Produto{
 
-    public Sobremesa(String nome, String descricao, BigDecimal valor, Enum tipo) {
+    public Sobremesa(String nome, String descricao, BigDecimal valor) {
         this.nome = nome;
         this.descricao = descricao;
         this.valor = valor;
-        this.tipo = tipo;
     }
 
     public String getNome() {
