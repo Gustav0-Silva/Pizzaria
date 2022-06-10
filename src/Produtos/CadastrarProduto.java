@@ -6,7 +6,7 @@ import java.math.BigDecimal;
 import java.util.Scanner;
 
 public class CadastrarProduto extends ArmazenaDados {
-    public static void executar(Scanner sc){
+    public void executar(Scanner sc){
         System.out.println("Digite o produto que deseja cadastrar: ");
         System.out.println("1 - Pizza");
         System.out.println("2 - Bebida");
@@ -14,13 +14,14 @@ public class CadastrarProduto extends ArmazenaDados {
         String action = sc.nextLine();
 
         switch (action) {
-            case "1", "2", "3" -> cadastro(sc, action);
-            default -> System.out.println("Opção inválida");
+            case "1": case "2": case "3":
+                cadastro(sc, action);
+            default: System.out.println("Opção inválida");
         }
 
     }
 
-    public static void cadastro(Scanner sc, String action){
+    public void cadastro(Scanner sc, String action){
 
         System.out.println("Digite o nome do produto que deseja adicionar: ");
         String nome = sc.nextLine();

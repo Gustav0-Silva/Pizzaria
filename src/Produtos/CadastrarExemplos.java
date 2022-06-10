@@ -3,9 +3,6 @@ package Produtos;
 import Objetos.*;
 
 import java.math.BigDecimal;
-import java.net.PortUnreachableException;
-import java.util.ArrayList;
-import java.util.List;
 
 public class CadastrarExemplos extends ArmazenaDados {
 

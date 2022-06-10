@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class Administrador {
 
-    public static void executar(Scanner scanner){
+    public void executar(Scanner scanner){
 
         boolean ciclo = true;
 
@@ -24,10 +24,12 @@ public class Administrador {
 
         switch (action){
             case "1":
-                CadastrarProduto.executar(scanner);
+                CadastrarProduto cad = new CadastrarProduto();
+                cad.executar(scanner);
                 break;
             case "2":
-                RemoverProduto.executar(scanner);
+                RemoverProduto remove = new RemoverProduto();
+                remove.executar(scanner);
                 break;
             case "3":
                 ExibirRelatorios.executar(scanner);
