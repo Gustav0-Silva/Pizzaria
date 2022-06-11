@@ -2,7 +2,7 @@ package Objetos;
 
 import java.math.BigDecimal;
 
-public class Produto extends ArmazenaDados {
+public class Produto {
 
     protected String nome;
     protected String descricao;

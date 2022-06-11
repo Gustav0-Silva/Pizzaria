@@ -1,5 +1,4 @@
 import Objetos.ArmazenaDados;
-//import Produtos.CadastrarExemplos;
 import Produtos.CadastrarExemplos;
 import Telas.Login;
 import Usuario.CadastrarUsuario;
@@ -29,13 +28,16 @@ public class Main extends ArmazenaDados{
 
             switch (action){
                 case "1":
-                    Login.loginClinete();
+                    Login login = new Login();
+                    login.loginClinete();
                     break;
                 case "2":
-                    CadastrarUsuario.cadastrarCliente();
+                    CadastrarUsuario cad = new CadastrarUsuario();
+                    cad.cadastrarCliente();
                     break;
                 case "3":
-                    RemoverUsuario.removerUsuario();
+                    RemoverUsuario remove = new RemoverUsuario();
+                    remove.removerUsuario();
                     break;
                 case "4":
                     System.out.println("Obrigado e volte sempre!");

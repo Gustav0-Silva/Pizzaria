@@ -1,12 +1,8 @@
 package Produtos;
 
 import Objetos.ArmazenaDados;
-import Objetos.Pedido;
-import Objetos.Produto;
 import Objetos.ProdutosVendidos;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 public class ExibirRelatorios extends ArmazenaDados {
