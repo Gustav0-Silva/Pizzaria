@@ -1,12 +1,13 @@
 package Objetos;
 
 import java.math.BigDecimal;
+import java.util.ArrayList;
 import java.util.List;
 
 public class ProdutosVendidos {
 
     private Cliente cliente;
-    private static List<Produto> listaPedidosFinal;
+    private List<Produto> listaPedidosFinal;
     private String metodoPagamento;
     private BigDecimal valorCompra;
 
@@ -14,7 +15,7 @@ public class ProdutosVendidos {
         this.cliente = cliente;
         this.metodoPagamento = metodoPagamento;
         this.valorCompra = valorCompra;
-        this.listaPedidosFinal = listaPedidosFinal;
+        this.listaPedidosFinal = new ArrayList<>(listaPedidosFinal);
     }
 
     public Cliente getCliente() {

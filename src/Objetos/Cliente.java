@@ -1,6 +1,6 @@
 package Objetos;
 
-public class Cliente extends ArmazenaDados{
+public class Cliente {
 
     private String nome;
     private String login;
@@ -38,16 +38,4 @@ public class Cliente extends ArmazenaDados{
         return bairro;
     }
 
-    public String getTelefone() {
-        return telefone;
-    }
-
-    public static Cliente findCliente(String login) {
-        for(Cliente cliente : listaClientes) {
-            if(cliente.getLogin().equals(login)) {
-                return cliente;
-            }
-        }
-        return null;
-    }
 }

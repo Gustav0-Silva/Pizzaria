@@ -4,14 +4,17 @@ import java.math.BigDecimal;
 
 public class Produto {
 
-    protected String nome;
-    protected String descricao;
-    protected BigDecimal valor;
+    private String nome;
+    private String descricao;
+    private BigDecimal valor;
 
-    public Produto(String nome, String descricao, BigDecimal valor) {
+    private Enum tipo;
+
+    public Produto(String nome, String descricao, BigDecimal valor, Enum tipo) {
         this.nome = nome;
         this.descricao = descricao;
         this.valor = valor;
+        this.tipo = tipo;
     }
 
     public String getNome() {
@@ -24,6 +27,10 @@ public class Produto {
 
     public BigDecimal getValor() {
         return valor;
+    }
+
+    public Enum getTipo(){
+        return tipo;
     }
 
     public Produto() {

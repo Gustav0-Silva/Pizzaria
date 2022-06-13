@@ -1,8 +1,7 @@
 import Objetos.ArmazenaDados;
-import Produtos.CadastrarExemplos;
+import ActionAdm.CadastrarExemplos;
 import Telas.Login;
-import Usuario.CadastrarUsuario;
-import Usuario.RemoverUsuario;
+import ActionUsuario.CadastrarUsuario;
 
 import java.util.Scanner;
 
@@ -21,8 +20,7 @@ public class Main extends ArmazenaDados{
             System.out.println();
             System.out.println("1 - Fazer um pedido");
             System.out.println("2 - Cadastrar novo cliente");
-            System.out.println("3 - Remover usuário");
-            System.out.println("4 - Sair do sistema");
+            System.out.println("3 - Sair do sistema");
 
             String action = scanner.nextLine();
 
@@ -36,10 +34,6 @@ public class Main extends ArmazenaDados{
                     cad.cadastrarCliente();
                     break;
                 case "3":
-                    RemoverUsuario remove = new RemoverUsuario();
-                    remove.removerUsuario();
-                    break;
-                case "4":
                     System.out.println("Obrigado e volte sempre!");
                     ciclo = false;
                     break;

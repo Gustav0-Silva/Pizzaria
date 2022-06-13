@@ -1,6 +1,6 @@
 package Telas;
 
-import Produtos.*;
+import ActionAdm.*;
 
 import java.util.Scanner;
 
@@ -18,7 +18,7 @@ public class Administrador {
         System.out.println("1 - Cadastrar um produto");
         System.out.println("2 - Remover um produto");
         System.out.println("3 - Exibir relatórios");
-        System.out.println("3 - Sair do sistema");
+        System.out.println("4 - Sair do sistema");
 
         String action = scanner.nextLine();
 
@@ -32,7 +32,8 @@ public class Administrador {
                 remove.executar(scanner);
                 break;
             case "3":
-                ExibirRelatorios.executar(scanner);
+                ExibirRelatorios exibir = new ExibirRelatorios();
+                exibir.executar(scanner);
                 break;
             case "4":
                 System.out.println("Saindo do sistema...");
