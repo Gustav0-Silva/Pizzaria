@@ -6,7 +6,6 @@ import Objetos.Cliente;
 import Utils.UtilsConfirmaSeExiste;
 import Utils.UtilsExibirListas;
 import Utils.UtilsRetornoDeCustos;
-import Utils.UtilsRetornoParaExibir;
 import java.math.BigDecimal;
 import java.util.Scanner;
 
@@ -48,11 +47,11 @@ public class Pagamento extends ArmazenaDados {
                 return;
 
             } else if (entrega.equals("2")) {
-                valorComEntrega = (custos.retornaCustoEntrega(cliente.getBairro()).add(valorDaVenda));
+                valorComEntrega = (cliente.getCustoEntrega().add(valorDaVenda));
 
                 System.out.println("O pedido será enviado no endereço: " + cliente.getEndereco());
-                System.out.println("Bairro: " + UtilsRetornoParaExibir.retornaNomeBairro(cliente.getBairro()));
-                System.out.println("Taxa de entrega: " + custos.retornaCustoEntrega(cliente.getBairro()));
+                System.out.println("Bairro: " + cliente.getBairroNome());
+                System.out.println("Taxa de entrega: " + cliente.getCustoEntrega());
                 System.out.println("Valor total: " + valorComEntrega);
                 System.out.println();
                 ciclo = false;

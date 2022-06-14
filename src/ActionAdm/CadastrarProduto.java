@@ -20,7 +20,7 @@ public class CadastrarProduto {
         }
     }
 
-    public void cadastro(Scanner sc, String action){
+    private void cadastro(Scanner sc, String action){
         FactoryProduto criarProd = new FactoryProduto();
 
         System.out.println("Digite o nome do produto que deseja adicionar: ");

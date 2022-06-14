@@ -5,7 +5,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ProdutosVendidos {
-
     private Cliente cliente;
     private List<Produto> listaPedidosFinal;
     private String metodoPagamento;

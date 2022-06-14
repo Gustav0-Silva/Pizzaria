@@ -5,33 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="743150df-3e94-4610-97b8-21f43c0beb71" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/ActionUsuario/FazerPedido.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ActionAdm/CadastrarProduto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ActionAdm/CadastrarProduto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ActionUsuario/Pagamento.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ActionUsuario/Pagamento.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Objetos/ArmazenaDados.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Objetos/ArmazenaDados.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Objetos/Bebida.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Objetos/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Objetos/Cliente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Objetos/Pizza.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Objetos/Produto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Objetos/Produto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Objetos/Sobremesa.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Produtos/CadastrarExemplos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ActionAdm/CadastrarExemplos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Produtos/CadastrarProduto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ActionAdm/CadastrarProduto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Produtos/ExibirRelatorios.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ActionAdm/ExibirRelatorios.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Produtos/IConfirmaRemover.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ActionAdm/IConfirmaRemover.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Produtos/PedirBebida.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Produtos/PedirPizza.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Produtos/PedirPizzaDoisSabores.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Produtos/PedirSobremesa.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Produtos/RemoverItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ActionUsuario/RemoverItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Produtos/RemoverProduto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ActionAdm/RemoverProduto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Telas/Administrador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Telas/Administrador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Telas/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Telas/Login.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Usuario/CadastrarUsuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ActionUsuario/CadastrarUsuario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Usuario/FazerPedido.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Usuario/ImprimirPedidos.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Usuario/Pagamento.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ActionUsuario/Pagamento.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Usuario/RemoverUsuario.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Objetos/ProdutosVendidos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Objetos/ProdutosVendidos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Utils/UtilsRetornoDeCustos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Utils/UtilsRetornoDeCustos.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Utils/UtilsRetornoParaExibir.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
