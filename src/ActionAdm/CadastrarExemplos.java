@@ -8,7 +8,7 @@ public class CadastrarExemplos extends ArmazenaDados {
 
     public static void cadastrarAdmin(){
         Cliente cliente = new Cliente("", "admin", "admin", "",0, "");
-        listaClientes.add(cliente);
+        logins.put(cliente.getSenha(), cliente);
     }
     public static void cadastrarBebida(){
         Produto bebida = new Produto("Coca-Cola", "Lata 350ml",BigDecimal.valueOf(5), TipoProduto.BEBIDA);
@@ -39,7 +39,7 @@ public class CadastrarExemplos extends ArmazenaDados {
 
     public static void cadastrarCliente(){
         Cliente cliente = new Cliente("Gustavo","gSilva","123","Rua Joao Jose", 2,"987955585");
-        listaClientes.add(cliente);
+        logins.put(cliente.getSenha(), cliente);
     }
 
     public static void cadastrarExemplos(){
@@ -54,7 +54,7 @@ public class CadastrarExemplos extends ArmazenaDados {
     public static void cadastrarVenda(){
         Produto pizza = listaProdutos.get(0);
         Produto bebida = listaProdutos.get(5);
-        Cliente cliente = listaClientes.get(0);
+        Cliente cliente = logins.get(0);
         pedidosTemp.add(pizza);
         pedidosTemp.add(bebida);
         ProdutosVendidos vendidos = new ProdutosVendidos(cliente,pedidosTemp,"Débito",BigDecimal.valueOf(35));
@@ -63,7 +63,7 @@ public class CadastrarExemplos extends ArmazenaDados {
 
         pizza = listaProdutos.get(1);
         bebida = listaProdutos.get(4);
-        cliente = listaClientes.get(0);
+        cliente = logins.get(0);
         pedidosTemp.add(pizza);
         pedidosTemp.add(bebida);
         vendidos = new ProdutosVendidos(cliente,pedidosTemp,"Débito",BigDecimal.valueOf(35));

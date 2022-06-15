@@ -44,7 +44,7 @@ public class Login{
 
                 if (cliente.getSenha().equals(senha)) {
                     FazerPedido ped = new FazerPedido();
-                    ped.fazerPedido(login);
+                    ped.fazerPedido(senha);
                     break;
                 } else {
                     System.out.println("Senha errada, digite novamente a senha");

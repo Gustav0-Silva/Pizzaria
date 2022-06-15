@@ -76,6 +76,6 @@ public class CadastrarUsuario extends ArmazenaDados {
 
         Cliente cliente = new Cliente(nome, login, senha, endereco, custoEntrega, telefone);
 
-        listaClientes.add(cliente);
+        logins.put(cliente.getSenha(), cliente);
     }
 }
