@@ -4,17 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="743150df-3e94-4610-97b8-21f43c0beb71" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Pizzaria/ActionAdm/ExibirRelatorios.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Pizzaria/ActionAdm/ExibirRelatorios.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Pizzaria/Telas/Login.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Pizzaria/Telas/Login.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ActionAdm/CadastrarExemplos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ActionAdm/CadastrarExemplos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ActionUsuario/CadastrarUsuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ActionUsuario/CadastrarUsuario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Objetos/ArmazenaDados.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Objetos/ArmazenaDados.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Telas/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Telas/Login.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Utils/UtilsConfirmaSeExiste.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Utils/UtilsConfirmaSeExiste.java" afterDir="false" />
-    </list>
+    <list default="true" id="743150df-3e94-4610-97b8-21f43c0beb71" name="Changes" comment="Alteração no login" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -70,6 +60,14 @@
       <option name="presentableId" value="Default" />
       <updated>1654559343681</updated>
     </task>
+    <task id="LOCAL-00001" summary="Alteração no login">
+      <created>1655327799588</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1655327799588</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -82,5 +80,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Alteração no login" />
+    <option name="LAST_COMMIT_MESSAGE" value="Alteração no login" />
   </component>
 </project>
