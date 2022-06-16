@@ -1,21 +1,18 @@
 package ActionUsuario;
 
+import ActionUsuario.FinalizarPedidos.FinalizarMain;
 import Factory.FactoryPizzaDoisSabores;
 import Objetos.TipoProduto;
 import Telas.SolicitarDadosPedido;
 import Utils.UtilsExibirListas;
 import Utils.UtilsRemover;
-//import Produtos.PedirPizza;
-
 import java.util.Scanner;
 
 public class FazerPedido{
     public void fazerPedido(String login){
         Scanner scanner = new Scanner(System.in);
         SolicitarDadosPedido pedir = new SolicitarDadosPedido();
-
-
-        boolean ciclo = true;
+        FinalizarMain finalizar = new FinalizarMain();
 
         do {
             System.out.println("O que você deseja pedir? ");
@@ -47,7 +44,7 @@ public class FazerPedido{
                     RemoverItem.removerItem(scanner);
                     break;
                 case "6":
-                    Pagamento.pagar(scanner,login);
+                    finalizar.finalizarPedido(scanner,login);
                     return;
                 case "7":
                     UtilsRemover.limparTemp();
@@ -58,7 +55,7 @@ public class FazerPedido{
 
             UtilsExibirListas.exibirTemp();
 
-        }while(ciclo);
+        }while(true);
 
     }
 

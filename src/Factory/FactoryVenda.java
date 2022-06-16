@@ -8,7 +8,7 @@ import java.math.BigDecimal;
 
 public class FactoryVenda extends ArmazenaDados {
 
-    public static void adicionaVenda(Cliente cliente, String pagamento, BigDecimal valorCompra) {
+    public void adicionaVenda(Cliente cliente, String pagamento, BigDecimal valorCompra) {
         ProdutosVendidos vendido = new ProdutosVendidos(cliente, pedidosTemp, pagamento, valorCompra);
         listaVendidos.add(vendido);
     }

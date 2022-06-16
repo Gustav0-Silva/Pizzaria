@@ -18,24 +18,16 @@ public class RemoverProduto extends ArmazenaDados implements IConfirmaRemover{
         String action = sc.nextLine();
 
         switch (action) {
-            case "1":
-                remover(sc, TipoProduto.PIZZA);
-                break;
-            case "2":
-                remover(sc, TipoProduto.BEBIDA);
-                break;
-            case "3":
-                remover(sc, TipoProduto.SOBREMESA);
-                break;
-            default: System.out.println("Opção inválida");
+            case "1" -> remover(sc, TipoProduto.PIZZA);
+            case "2" -> remover(sc, TipoProduto.BEBIDA);
+            case "3" -> remover(sc, TipoProduto.SOBREMESA);
+            default -> System.out.println("Opção inválida");
         }
-
     }
 
-    public void remover(Scanner sc, Enum tipo){
+    private void remover(Scanner sc, Enum tipo){
         UtilsConfirmaSeExiste prodExiste = new UtilsConfirmaSeExiste();
         String nome;
-        boolean confirma = false;
 
         UtilsExibirListas.imprimirProdutos(tipo);
         System.out.println();
@@ -43,30 +35,16 @@ public class RemoverProduto extends ArmazenaDados implements IConfirmaRemover{
         System.out.println("Digite o nome ou número do produto que deseja remover: ");
         nome = sc.nextLine();
 
-        Produto produto1 = prodExiste.produtoExisteNome(nome,tipo);
-        if (produto1 != null){
-            confirma = confirmaRemover(sc);
+        Produto produto = prodExiste.isValidProduto(nome,tipo);
+        if (produto != null){
+            boolean confirma = confirmaRemover(sc);
             if (confirma){
-                excluirProduto(produto1);
+                excluirProduto(produto);
             }else {
                 System.out.println("Operação cancelada");
-                return;
             }
             return;
         }
-
-        Produto produto2 = prodExiste.produtoExisteNumero(Integer.parseInt(nome),tipo);
-        if (produto2 != null){
-            confirma = confirmaRemover(sc);
-            if (confirma){
-                excluirProduto(produto2);
-                return;
-            }else {
-                System.out.println("Operação cancelada");
-                return;
-            }
-        }
-
         System.out.println("Produto informado não é válido");
     }
     @Override
@@ -89,7 +67,7 @@ public class RemoverProduto extends ArmazenaDados implements IConfirmaRemover{
     }
 
 
-    public static void excluirProduto(Produto produtoRemover){
+    private static void excluirProduto(Produto produtoRemover){
        listaProdutos.remove(produtoRemover);
         System.out.println("Produto removido com sucesso");
     }

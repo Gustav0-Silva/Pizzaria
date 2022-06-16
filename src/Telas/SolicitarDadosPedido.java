@@ -9,6 +9,7 @@ public class SolicitarDadosPedido {
 
     public void receberDados(Scanner sc, Enum tipo){
         UtilsExibirListas.imprimirProdutos(tipo);
+        FactoryPedido factoryPedido = new FactoryPedido();
 
         System.out.println("Digite o produto que deseja ou digite S para sair");
         String sabor = sc.nextLine();
@@ -17,13 +18,10 @@ public class SolicitarDadosPedido {
             return;
         }
 
-        boolean action = FactoryPedido.gerarPedido(sabor,tipo);
+        boolean action = factoryPedido.gerarPedido(sabor,tipo);
 
-        if (action){
-            return;
-        }else {
-            SolicitarDadosPedido pedir = new SolicitarDadosPedido();
-            receberDados(sc,tipo);
+        if (!action) {
+            receberDados(sc, tipo);
         }
 
     }

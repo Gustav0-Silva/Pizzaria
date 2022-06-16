@@ -9,13 +9,13 @@ import java.util.Scanner;
 public class Login{
 
     public void loginClinete(){
-
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Digite o login do cliente");
-        String login = scanner.nextLine();
-        String senha;
         Administrador adm = new Administrador();
         CadastrarUsuario cad = new CadastrarUsuario();
+        Scanner scanner = new Scanner(System.in);
+        String senha;
+
+        System.out.println("Digite o login do cliente");
+        String login = scanner.nextLine();
 
         if (login.equals("Admin")){
             senha = scanner.nextLine();
@@ -37,7 +37,6 @@ public class Login{
             }
 
         }else {
-
             do {
                 System.out.println("Digite a senha: ");
                 senha = scanner.nextLine();

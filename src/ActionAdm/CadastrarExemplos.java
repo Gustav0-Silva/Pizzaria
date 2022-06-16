@@ -39,7 +39,7 @@ public class CadastrarExemplos extends ArmazenaDados {
 
     public static void cadastrarCliente(){
         Cliente cliente = new Cliente("Gustavo","gSilva","123","Rua Joao Jose", 2,"987955585");
-        logins.put(cliente.getSenha(), cliente);
+        logins.put(cliente.getLogin(), cliente);
     }
 
     public static void cadastrarExemplos(){

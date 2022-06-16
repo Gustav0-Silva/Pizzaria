@@ -47,35 +47,16 @@ public class CadastrarUsuario extends ArmazenaDados {
 
             String action = scanner.nextLine();
 
-            switch (action){
-                case "1":
-                    custoEntrega = 1;
-                    ciclo = false;
-                    break;
-                case "2":
-                    custoEntrega = 2;
-                    ciclo = false;
-                    break;
-                case "3":
-                    custoEntrega = 3;
-                    ciclo = false;
-                    break;
-                case "4":
-                    custoEntrega = 4;
-                    ciclo = false;
-                    break;
-                case "5":
-                    custoEntrega = 5;
-                    ciclo = false;
-                    break;
-                default:
-                    System.out.println("Opção inválida, por favor, informe outra");
+            if (action.matches("[1-5]")){
+                custoEntrega = Integer.parseInt(action);
+                ciclo = false;
+            }else {
+                System.out.println("Bairro inválido, por favor, tente novamente");
             }
-
         }while(ciclo);
 
         Cliente cliente = new Cliente(nome, login, senha, endereco, custoEntrega, telefone);
-
-        logins.put(cliente.getSenha(), cliente);
+        logins.put(cliente.getLogin(), cliente);
+        System.out.println("Cliente adicionado com sucesso!");
     }
 }

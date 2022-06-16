@@ -30,18 +30,11 @@ public class CadastrarProduto {
         System.out.println("Digite o valor do produto: ");
         BigDecimal valor = sc.nextBigDecimal();
 
-        switch (action){
-            case "1":
-                criarProd.criarProduto(nome,descricao,valor,TipoProduto.PIZZA);
-                break;
-            case "2":
-                criarProd.criarProduto(nome,descricao,valor,TipoProduto.BEBIDA);
-                break;
-            case "3":
-                criarProd.criarProduto(nome,descricao,valor,TipoProduto.SOBREMESA);
-                break;
-            default:
-                System.out.println("Produto não adicionado");
+        switch (action) {
+            case "1" -> criarProd.criarProduto(nome, descricao, valor, TipoProduto.PIZZA);
+            case "2" -> criarProd.criarProduto(nome, descricao, valor, TipoProduto.BEBIDA);
+            case "3" -> criarProd.criarProduto(nome, descricao, valor, TipoProduto.SOBREMESA);
+            default -> System.out.println("Produto não adicionado");
         }
     }
 }
