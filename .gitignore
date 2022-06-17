@@ -3,3 +3,6 @@
 *.iws
 *.iml
 *.ipr
+.idea/misc.xml
+.idea/
+.idea/workspace.xml
