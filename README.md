@@ -1,10 +1,10 @@
 # Pizzaria
 
-<h2>BEM VINDOS À PIZZARIA MASTERPIZZAS, LET'S CODE?</h2>
+<p>BEM VINDOS À PIZZARIA MASTERPIZZAS, LET'S CODE?</p>
 
-switch(action):
-  case 1:
-    KeepCoding(dev_Makers);
-    break;
-  case 2: default:
-    break;
+<p>switch(action):</p>
+<p>&nbsp;case 1:
+ &nbsp;&nbsp;KeepCoding(dev_Makers);
+ &nbsp;&nbsp;break;
+ &nbsp;case 2: default:
+ &nbsp;&nbsp;break;</p>
