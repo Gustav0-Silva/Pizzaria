@@ -1,6 +1,6 @@
 # Pizzaria
 
-<h1>BEM VINDOS À PIZZARIA MASTERPIZZAS, LET'S CODE?</h1>
+<h2>BEM VINDOS À PIZZARIA MASTERPIZZAS, LET'S CODE?</h2>
 
 switch(action):
   case 1:
