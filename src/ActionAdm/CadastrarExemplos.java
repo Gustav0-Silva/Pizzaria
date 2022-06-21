@@ -71,5 +71,4 @@ public class CadastrarExemplos extends ArmazenaDados {
         pedidosTemp.clear();
 
     }
-
 }
